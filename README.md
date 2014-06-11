@@ -1,7 +1,7 @@
-dotfiles
+Dotfiles
 ========
 
 
 To install dotfiles run:
 
-  ./install
+    ./install.sh
