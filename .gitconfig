@@ -1,0 +1,28 @@
+[user]
+	name = Neil Lyons
+	email = nwjlyons@googlemail.com
+[color]
+    ui = auto
+[alias]
+    s = status
+    a = add . -vA
+    c = commit
+    d = diff
+    dc = diff --cached
+    # Diffs since last tag
+    dt = "!sh -c 'git diff "$(git describe --tags --abbrev=0)"..HEAD --oneline'"
+    f = fetch
+    l = log --pretty=format:'%C(bold)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    # Todays commits
+    lt = "!sh -c 'git l --since=\"1 day ago\"'"
+    # Log of my commits
+    lm = "!sh -c 'git l --author=\""$(git config user.name)"\"'"
+    # Log of my commits today
+    lmt= "!sh -c 'git l --since=\"1 day ago\" --author=\""$(git config user.name)"\"'"
+    b = branch
+    co = checkout
+    p = "!git push origin \"$(git rev-parse --abbrev-ref HEAD)\"" 
+    pu = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\"" 
+    ff = "!git merge --ff-only origin/\"$(git rev-parse --abbrev-ref HEAD)\""
+    m = merge
+
