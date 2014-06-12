@@ -126,6 +126,8 @@ alias j="jobs"
 # $
 export PS1="\[\e]0;\u@\h:\w\a\]${debian_chroot:+($debian_chroot)}\u@\[\h:\w\e[0;33m\$(__git_ps1)\e[0;37m\n$ "
 
+export GIT_PS1_SHOWDIRTYSTATE=true
+
 source /usr/local/bin/virtualenvwrapper.sh
 source `which pycompletion`
 
