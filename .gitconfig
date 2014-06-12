@@ -14,11 +14,11 @@
     f = fetch
     l = log --pretty=format:'%C(bold)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     # Todays commits
-    lt = "!sh -c 'git l --since=\"1 day ago\"'"
+    lt = "!sh -c 'git l --since=\"$(date  +\"%F 00:00:00\")\"'"
     # Log of my commits
     lm = "!sh -c 'git l --author=\""$(git config user.name)"\"'"
     # Log of my commits today
-    lmt= "!sh -c 'git l --since=\"1 day ago\" --author=\""$(git config user.name)"\"'"
+    lmt= "!sh -c 'git l --since=\"$(date  +\"%F 00:00:00\")\" --author=\""$(git config user.name)"\"'"
     b = branch
     co = checkout
     p = "!git push origin \"$(git rev-parse --abbrev-ref HEAD)\"" 
