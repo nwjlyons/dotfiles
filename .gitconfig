@@ -15,13 +15,15 @@
     # Diff current branch against another branch.
     db = "!sh -c 'f() { git diff $0.."$(git describe --tags --abbrev=0)" --oneline;}; f'"
     f = fetch
-    l = log --pretty=format:'%C(bold)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit 
+    l = log --pretty=format:'%C(bold)%h%Creset -%C(yellow reverse)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit 
+    lg = "!sh -c 'git l --graph'"
     # Todays commits
     lt = "!sh -c 'git l --since=\"$(date  +\"%F 00:00:00\")\"'"
     # Log of my commits
     lm = "!sh -c 'git l --author=\""$(git config user.name)"\"'"
     # Log of my commits today
     lmt= "!sh -c 'git l --since=\"$(date  +\"%F 00:00:00\")\" --author=\""$(git config user.name)"\"'"
+    ld = "!sh -c 'git l "$(git describe --tags --abbrev=0)"..HEAD'"
     b = branch
     co = checkout
     corb = "!sh -c 'f(){ git branch $0 origin/$0; };f'"
