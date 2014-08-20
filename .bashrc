@@ -119,6 +119,7 @@ alias gitconfig="vi ~/.gitconfig"
 alias reload="source ~/.bashrc"
 alias vimrc="vi ~/.vimrc"
 alias dotfiles="cd ~/.dotfiles"
+alias pygmentizehtml="pygmentize -f terminal256 -l html -O style=monokai"
 
 alias runserver="python -m SimpleHTTPServer"
 alias h="cd ~"

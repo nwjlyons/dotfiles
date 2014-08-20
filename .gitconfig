@@ -33,3 +33,4 @@
     m = merge
     fff = "!sh -c 'git f && git ff'"
     rdel = "push origin --delete"
+    clm = "!git log -1 --pretty=%B | tr -d '\n' | xclip -selection c"
