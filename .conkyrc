@@ -50,18 +50,25 @@ S Y S T E M    I N F O
 ${hr}
 Battery $alignr ${battery_percent}%
 ${battery_bar}
-wlan0:$alignr${addr wlan0}
-eth0:$alignr${addr eth0}
+wlan0:$alignr ${addr wlan0}
+eth0:$alignr ${addr eth0}
 OS: $alignr Crunchbang ${machine}
-Kernal: $alignr${kernel}
+Kernal: $alignr ${kernel}
 RAM:$alignr$mem/$memmax
 $membar
-Swap usage:$alignr$swap/$swapmax
-Disk usage:$alignr${fs_used /}/${fs_size /}
+Swap usage:$alignr $swap/$swapmax
+Disk usage:$alignr ${fs_used /}/${fs_size /}
 ${fs_bar}
-CPU usage:$alignr${cpu cpu0}%
+CPU usage:$alignr ${cpu cpu0}%
 ${cpubar cpu0}
-Uptime:$alignr$uptime
+Uptime:$alignr $uptime
 Down : ${downspeed wlan0}kb/s${alignr}Total : ${totaldown wlan0}
 Up   : ${upspeed wlan0}kb/s${alignr}Total : ${totalup wlan0}
+${hr}
+CPU1 Temp: $alignr ${exec cat /sys/devices/platform/coretemp.0/temp2_input }
+CPU2 Temp: $alignr ${exec cat /sys/devices/platform/coretemp.0/temp3_input }
+Fan Speed: $alignr ${exec cat /sys/devices/platform/applesmc.768/fan1_output }
+Screen brightness: $alignr ${exec cat /sys/class/backlight/nv_backlight/brightness }
+Keyboard brightness: $alignr ${exec cat /sys/class/leds/smc::kbd_backlight/brightness }
+${hr}
 ${font Liberation Sans:size=7}${exec cat /proc/cpuinfo | grep "model name" | cut -c 14-60 | uniq}

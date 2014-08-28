@@ -169,6 +169,18 @@ extract () {
     fi
 }
 
+brightness() {
+    echo $1 | sudo tee /sys/class/backlight/nv_backlight/brightness
+}
+
+keyboard_brightness() {
+    echo $1 | sudo tee /sys/class/leds/smc::kbd_backlight/brightness
+}
+
+fan() {
+    echo $1 | sudo tee /sys/devices/platform/applesmc.768/fan1_output
+}
+
 # Print directory size
 dirsize() {
     du -ch $1 | grep "total"
