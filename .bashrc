@@ -181,6 +181,10 @@ fan() {
     echo $1 | sudo tee /sys/devices/platform/applesmc.768/fan1_output
 }
 
+manual_fan() {
+    echo 1 | sudo tee /sys/devices/platform/applesmc.768/fan1_manual
+}
+
 # Print directory size
 dirsize() {
     du -ch $1 | grep "total"
