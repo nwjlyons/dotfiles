@@ -227,26 +227,75 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-F1">
+
+    <keybind key="S-W-1">
+      <action name="SendToDesktop">
+        <to>1</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-W-2">
+      <action name="SendToDesktop">
+        <to>2</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-W-3">
+      <action name="SendToDesktop">
+        <to>3</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-W-4">
+      <action name="SendToDesktop">
+        <to>4</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-W-5">
+      <action name="SendToDesktop">
+        <to>5</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-W-6">
+      <action name="SendToDesktop">
+        <to>6</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+
+    <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
       </action>
     </keybind>
-    <keybind key="W-F2">
+    <keybind key="W-2">
       <action name="GoToDesktop">
         <to>2</to>
       </action>
     </keybind>
-    <keybind key="W-F3">
+    <keybind key="W-3">
       <action name="GoToDesktop">
         <to>3</to>
       </action>
     </keybind>
-    <keybind key="W-F4">
+    <keybind key="W-4">
       <action name="GoToDesktop">
         <to>4</to>
       </action>
     </keybind>
+    <keybind key="W-5">
+      <action name="GoToDesktop">
+        <to>5</to>
+      </action>
+    </keybind>
+    <keybind key="W-6">
+      <action name="GoToDesktop">
+        <to>6</to>
+      </action>
+    </keybind>
+
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
@@ -506,13 +555,83 @@
         <height>745</height>
       </action>
     </keybind>
+    <keybind key="W-j">
+      <action name="ToggleMaximizeVert" />
+      <action name="MoveResizeTo">
+        <width>50%</width>
+      </action>
+    </keybind>
     <keybind key="W-s">
+      <action name="Unmaximize" />
       <action name="MoveResizeTo">
         <x>center</x>
         <y>center</y>
-        <width>70%</width>
-        <height>70%</height>
+        <width>85%</width>
+        <height>85%</height>
       </action>
+    </keybind>
+    <!-- Laptop fan -->
+    <keybind key="XF86AudioNext">
+        <action name="Execute">
+          <command>sudo /opt/control-hardware/laptop-fan.sh up</command>
+        </action>
+    </keybind>
+    <keybind key="W-XF86AudioNext">
+        <action name="Execute">
+          <command>sudo /opt/control-hardware/laptop-fan.sh max</command>
+        </action>
+    </keybind>
+    <keybind key="XF86AudioPrev">
+        <action name="Execute">
+          <command>sudo /opt/control-hardware/laptop-fan.sh down</command>
+        </action>
+    </keybind>
+    <keybind key="W-XF86AudioPrev">
+        <action name="Execute">
+          <command>sudo /opt/control-hardware/laptop-fan.sh min</command>
+        </action>
+    </keybind>
+    <!-- Keyboard backlight -->
+    <keybind key="XF86KbdBrightnessUp">
+        <action name="Execute">
+          <command>sudo /opt/control-hardware/keyboard-backlight.sh up</command>
+        </action>
+    </keybind>
+    <keybind key="W-XF86KbdBrightnessUp">
+        <action name="Execute">
+          <command>sudo /opt/control-hardware/keyboard-backlight.sh max</command>
+        </action>
+    </keybind>
+    <keybind key="XF86KbdBrightnessDown">
+        <action name="Execute">
+          <command>sudo /opt/control-hardware/keyboard-backlight.sh down</command>
+        </action>
+    </keybind>
+    <keybind key="W-XF86KbdBrightnessDown">
+        <action name="Execute">
+          <command>sudo /opt/control-hardware/keyboard-backlight.sh min</command>
+        </action>
+    </keybind>
+    <!-- Screen Backlight -->
+    <keybind key="XF86LaunchB">
+        <action name="Execute">
+          <command>sudo /opt/control-hardware/screen-brightness.sh up</command>
+        </action>
+    </keybind>
+    <keybind key="W-XF86LaunchB">
+        <action name="Execute">
+          <command>sudo /opt/control-hardware/screen-brightness.sh max</command>
+        </action>
+    </keybind>
+    <keybind key="XF86LaunchA">
+        <action name="Execute">
+          <command>sudo /opt/control-hardware/screen-brightness.sh down</command>
+        </action>
+    </keybind>
+    <keybind key="W-XF86LaunchA">
+        <action name="Execute">
+          <command>sudo /opt/control-hardware/screen-brightness.sh min</command>
+        </action>
     </keybind>
   </keyboard>
   <mouse>
@@ -913,7 +1032,7 @@
   </menu>
   <applications>
      <application class="*">
-         <decor>no</decor>
+         <decor>yes</decor>
     </application>
     <!--
   # this is an example with comments through out. use these to make your
