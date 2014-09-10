@@ -17,6 +17,7 @@
     f = fetch
     l = log --pretty=format:'%C(bold)%h%Creset -%C(yellow reverse)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit 
     lg = "!sh -c 'git l --graph'"
+    lf = "!sh -c 'git l -p' "
     # Todays commits
     lt = "!sh -c 'git l --since=\"$(date  +\"%F 00:00:00\")\"'"
     # Log of my commits

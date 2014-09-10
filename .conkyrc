@@ -57,6 +57,7 @@ Kernal: $alignr ${kernel}
 RAM:$alignr$mem/$memmax
 $membar
 Swap usage:$alignr $swap/$swapmax
+$swapbar
 Disk usage:$alignr ${fs_used /}/${fs_size /}
 ${fs_bar}
 CPU usage:$alignr ${cpu cpu0}%

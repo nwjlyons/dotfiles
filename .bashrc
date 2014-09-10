@@ -125,6 +125,8 @@ alias runserver="python -m SimpleHTTPServer"
 alias h="cd ~"
 alias j="jobs"
 
+alias macversion="sudo dmidecode -s system-product-name"
+
 # Show git branch and cursor is on new line. eg:
 #
 # nwjlyons@crunchbang:~/code/project (master)
