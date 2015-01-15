@@ -1,8 +1,8 @@
-set shiftwidth=4
-set softtabstop=4
-set shiftround
-set tabstop=4
-set expandtab
-filetype plugin on
-filetype indent on
 syntax on
+set cursorline
+set scrolloff=999
+set nobackup
+set noswapfile
+
+" use 4 spaces for tabs
+set tabstop=4 softtabstop=4 shiftwidth=4

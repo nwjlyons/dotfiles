@@ -15,7 +15,7 @@
     # Diff current branch against another branch.
     db = "!sh -c 'f() { git diff $0.."$(git describe --tags --abbrev=0)" --oneline;}; f'"
     f = fetch
-    l = log --pretty=format:'%C(bold)%h%Creset -%C(yellow reverse)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit 
+    l = log --pretty=format:'%C(bold)%h%Creset -%C(yellow reverse)%d%Creset %s %Cgreen(%cD) %C(bold blue)<%an>%Creset' --abbrev-commit 
     lg = "!sh -c 'git l --graph'"
     lf = "!sh -c 'git l -p' "
     # Todays commits
@@ -35,3 +35,8 @@
     fff = "!sh -c 'git f && git ff'"
     rdel = "push origin --delete"
     clm = "!git log -1 --pretty=%B | tr -d '\n' | xclip -selection c"
+[core]
+	editor = /usr/bin/vim
+	excludesfile = /home/nwjlyons/.gitignore_global
+[log]
+	date = iso
