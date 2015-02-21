@@ -296,6 +296,10 @@
       </action>
     </keybind>
 
+    <keybind key="W-0">
+      <action name="ToggleAlwaysOnTop"/>
+    </keybind>
+
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
