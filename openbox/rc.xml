@@ -300,11 +300,11 @@
       <action name="ToggleAlwaysOnTop"/>
     </keybind>
 
-    <keybind key="W-d">
+<!--     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
-    </keybind>
+    </keybind> -->
     <!-- Keybindings for windows -->
-    <keybind key="A-F4">
+    <keybind key="W-q">
       <action name="Close"/>
     </keybind>
     <keybind key="A-Escape">
@@ -470,12 +470,12 @@
       </action>
     </keybind>
     <keybind key="W-m">
-      <action name="Execute">
-        <startupnotify>
+      <action name="ToggleDecorations">
+<!--         <startupnotify>
           <enabled>true</enabled>
           <name>Mediaplayer</name>
         </startupnotify>
-        <command>vlc</command>
+        <command>vlc</command> -->
       </action>
     </keybind>
     <keybind key="W-p">
@@ -582,13 +582,22 @@
         <height>85%</height>
       </action>
     </keybind>
+    <keybind key="W-d">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>center</y>
+        <width>75%</width>
+        <height>75%</height>
+      </action>
+    </keybind>
     <keybind key="W-x">
       <action name="Unmaximize" />
       <action name="MoveResizeTo">
-        <x>50</x>
-        <y>50</y>
-        <width>830px</width>
-        <height>65%</height>
+        <x>center</x>
+        <y>center</y>
+        <width>55%</width>
+        <height>55%</height>
       </action>
     </keybind>
     <keybind key="W-i">
@@ -1075,7 +1084,17 @@
   </menu>
   <applications>
      <application class="*">
-         <decor>yes</decor>
+         <decor>no</decor>
+         <position force="no">
+             <x>center</x>
+             <y>center</y>
+           </position>
+    </application>
+    <application class="tint2">
+      <position force="no">
+        <x>default</x>
+        <y>default</y>
+      </position>
     </application>
     <!--
   # this is an example with comments through out. use these to make your
