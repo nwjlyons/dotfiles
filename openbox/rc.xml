@@ -1083,14 +1083,15 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
-     <application class="*">
-         <decor>no</decor>
-         <position force="no">
-             <x>center</x>
-             <y>center</y>
-           </position>
+     <application type="desktop">
+     <decor>no</decor>
+     <position force="no">
+         <x>center</x>
+         <y>center</y>
+       </position>
     </application>
-    <application class="tint2">
+
+    <application type="dock">
       <position force="no">
         <x>default</x>
         <y>default</y>
