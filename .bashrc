@@ -84,9 +84,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -112,7 +112,7 @@ fi
 export GIT_EDITOR=vi
 
 #Aliases
-alias ll="ls -lah --group-directories-first"
+alias ll="LC_COLLATE=C ls -lah --group-directories-first"
 
 alias bashrc="vi ~/.bashrc"
 alias gitconfig="vi ~/.gitconfig"
