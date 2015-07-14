@@ -18,3 +18,11 @@ set wildmenu
 set t_Co=256
 
 colors zenburn
+
+" :W sudo saves the file 
+" (useful for handling the permission-denied error)
+command W w !sudo tee % > /dev/null
+
+set hlsearch
+
+set encoding=utf8
